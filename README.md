@@ -6,7 +6,7 @@ ViBE background removing [Tracking.js](http://trackingjs.com) tracker
 
 A JavaScript library by Roman Bartusiak.
 
-See the [project homepage](http://riomus.github.io/vibe.js).
+Check  [demo](http://riomus.github.io/vibe.js)
 
 ## Installation
 
