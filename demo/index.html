@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>vibe.js demo</title>
+    <link rel="stylesheet" href="./assets/normalize.css" />
+    <link rel="stylesheet" href="./assets/main.css" />
+    <style>
+      /* begin demo embedded styles */
+
+      /* end demo embedded styles */
+    </style>
+  </head>
+  <body>
+    <h1>vibe.js demo</h1>
+
+    <!-- begin demo markup -->
+    <video width="400" height="300" preload autoplay loop muted></video>
+    <canvas id="preview" width="400" height="300" preload autoplay loop muted></canvas>
+
+    <!-- end demo markup -->
+
+    <p>See the <a href="http://riomus.github.io/vibe.js">project homepage</a>.
+    <p>Check out the <a href="https://github.com/riomus/vibe.js">project repo</a>.
+    <p>Copyright 2015 Roman Bartusiak</p>
+
+    <script src="./js/tracking.js"></script>
+    <script src="./js/vibe.js"></script>
+
+    <script>
+      var canvas = document.getElementById('preview');
+      var context = canvas.getContext('2d');
+      var vibeTracker=new ViBETracker();
+        var lastTrack=new Date().getTime();
+      vibeTracker.on('track',function(data){
+      var canvasData = context.getImageData(0, 0, canvas.width, canvas.height);
+        for(var i=0;i<canvasData.data.length;i++){
+          canvasData.data[i]=data.frame[i];
+        }
+        context.putImageData(canvasData,0,0);
+        var fromLast=(new Date().getTime())-lastTrack;
+        context.fillStyle = '#00f';
+      context.font = 'bold 16px Arial';
+        context.fillText(Math.round(1000/fromLast)+'FPS', 100, 120);
+        lastTrack=new Date().getTime();
+      });
+
+      tracking.track(document.getElementsByTagName('video')[0], vibeTracker, { camera: true });
+      /* end demo script */
+    </script>
+  </body>
+</html>

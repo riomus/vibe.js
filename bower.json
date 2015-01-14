@@ -1,0 +1,14 @@
+{
+  "name": "vibe.js",
+  "version": "0.0.0",
+  "main": "dist/vibe.min.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+"tracking.js":"1.1.0"
+}
+}

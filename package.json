@@ -1,0 +1,27 @@
+{
+  "name": "vibe.js",
+  "version": "0.0.0",
+  "main": "dist/vibe.min.js",
+  "description": "ViBE background removing Trackinf.js tracker",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/riomus/vibe.js.git"
+  },
+  "keywords": [],
+  "author": "Roman Bartusiak",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-serve":"~0.1.6",
+    "grunt-contrib-copy":"*",
+    "grunt-contrib-clean":"~0.6.0",
+    "grunt-contrib-qunit": "~0.3.0",
+    "grunt-versioner": "^0.1.7"
+  }
+}
